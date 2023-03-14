@@ -1,0 +1,96 @@
+﻿<Window x:Class="freakincsharpsa.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:freakincsharpsa"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="tabManage" Header="MANAGEMENT" Margin="-2,-2,-38,0" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="61*"/>
+                        <ColumnDefinition Width="38*"/>
+                        <ColumnDefinition Width="298*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblCoffee" Grid.Column="2" Content="COFFEE SHOP SYSTEM" HorizontalAlignment="Left" Margin="98,22,0,0" VerticalAlignment="Top" Width="202" FontWeight="Bold" FontSize="18" Height="36"/>
+                    <Button x:Name="Senpai" Content="" HorizontalAlignment="Left" Margin="20,83,0,0" VerticalAlignment="Top" Width="145" Height="285" Grid.ColumnSpan="2" Click="Senpai_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/save to file 12.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="Loli" Content="" HorizontalAlignment="Left" Margin="61,83,0,0" VerticalAlignment="Top" Width="145" Height="285" Grid.Column="1" Grid.ColumnSpan="2" Click="Loli_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/print12.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="Skirts" Content="" HorizontalAlignment="Left" Margin="143,83,0,0" VerticalAlignment="Top" Width="145" Height="285" Grid.Column="2" Click="Skirts_Click">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/Viewdata12.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Label x:Name="lblSale" Grid.Column="2" Content="Sale" HorizontalAlignment="Left" Margin="311,83,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="uwu" Grid.Column="2" Content="Daily" HorizontalAlignment="Left" Margin="359,89,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="owo" Grid.Column="2" Content="Monthly" HorizontalAlignment="Left" Margin="426,89,0,0" VerticalAlignment="Top"/>
+                    <RadioButton x:Name="spicy" Grid.Column="2" Content="Yearly" HorizontalAlignment="Left" Margin="511,89,0,0" VerticalAlignment="Top"/>
+                    <DatePicker x:Name="fishnets" Grid.Column="2" HorizontalAlignment="Left" Margin="359,120,0,0" VerticalAlignment="Top" Width="205">
+                        <DatePicker.Style>
+                            <Style TargetType="DatePicker">
+                                <Setter Property="IsDropDownOpen" Value="False"></Setter>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="IsDropDownOpen" Value="True"></Setter>
+                                    </Trigger>
+                                    <Trigger Property="IsMouseOver" Value="False">
+                                        <Setter Property="IsDropDownOpen" Value="False"></Setter>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </DatePicker.Style>
+                    </DatePicker>
+                    <Label Grid.Column="2" Content="Summary:" HorizontalAlignment="Left" Margin="311,154,0,0" VerticalAlignment="Top" Width="72"/>
+                    <TextBox x:Name="shawty" Grid.Column="2" HorizontalAlignment="Left" Margin="311,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" Height="183" Background="#FFABADB3"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tabOrder" Header="ORDER" Margin="38,-2,-99,0" FontWeight="Bold">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="348*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="lblCoffee_Copy" Content="COFFEE SHOP SYSTEM" HorizontalAlignment="Left" Margin="198,22,0,0" VerticalAlignment="Top" Width="202" FontWeight="Bold" FontSize="18" Height="36" Grid.Column="1"/>
+                    <Label x:Name="lblTypes" Content="Types of Coffee:" HorizontalAlignment="Left" Margin="44,96,0,0" VerticalAlignment="Top" Width="102" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="hide" HorizontalAlignment="Left" Margin="68,98,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1">
+                        <ComboBoxItem IsSelected="true" Content="Select"/>
+                        <ComboBoxItem Content="Late"/>
+                        <ComboBoxItem Content="Capuccino"/>
+                        <ComboBoxItem Content="Americano"/>
+                        <ComboBoxItem Content="Espresso"/>
+                        <ComboBoxItem Content="Machiato"/>
+                    </ComboBox>
+                    <Image x:Name="CoffeeIMG" HorizontalAlignment="Left" Height="172" Margin="68,152,0,0" VerticalAlignment="Top" Width="206" Grid.Column="1" Source="/48-485680_coffee-logo-logo-elements-logo-objects-coffee-logo.png"/>
+                    <Button x:Name="Step_Jason" Content="Add to Order" HorizontalAlignment="Left" Margin="68,334,0,0" VerticalAlignment="Top" Width="98" Grid.Column="1" Click="Step_Jason_Click"/>
+                    <Button x:Name="Senpai_Jason" Content="Print" HorizontalAlignment="Left" Margin="180,334,0,0" VerticalAlignment="Top" Width="94" Grid.Column="1" Click="Senpai_Jason_Click"/>
+                    <Label x:Name="lblSize" Content="Size:" HorizontalAlignment="Left" Margin="360,94,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <RadioButton x:Name="anime_playlist_be_bussin" Content="Small" HorizontalAlignment="Left" Margin="421,100,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <RadioButton x:Name="virgins_dont_lose" Content="Medium" HorizontalAlignment="Left" Margin="494,100,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <RadioButton x:Name="copyright_my_ahh" Content="Large" HorizontalAlignment="Left" Margin="576,100,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <CheckBox x:Name="you_wish_i_copied" Content="Sugar" HorizontalAlignment="Left" Margin="421,140,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <CheckBox x:Name="im_da_alpha_da_omega_and_everythin_in_between" Content="Cream" HorizontalAlignment="Left" Margin="494,140,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <ComboBox x:Name="vibin" HorizontalAlignment="Left" Margin="576,137,0,0" VerticalAlignment="Top" Width="94" Grid.Column="1">
+                        <ComboBoxItem IsSelected="true" Content="Select Qtity"/>
+                        <ComboBoxItem Content="1"/>
+                        <ComboBoxItem Content="2"/>
+                        <ComboBoxItem Content="3"/>
+                        <ComboBoxItem Content="4"/>
+                        <ComboBoxItem Content="5"/>
+                    </ComboBox>
+                    <Label x:Name="lblOrderSum" Content="Order Summary:" HorizontalAlignment="Left" Margin="360,163,0,0" VerticalAlignment="Top" Width="111" Grid.Column="1"/>
+                    <TextBox x:Name="soulmates" HorizontalAlignment="Left" Margin="360,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="266" Height="154" Background="#FFABADB3" Grid.Column="1"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
